@@ -1,0 +1,163 @@
+/* General Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('p1.jpg'); /* Background for the entire page */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* Adding Blur to the Background */
+body::before {
+  content: ''; /* To create an empty pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('p1.jpg'); /* The same background image */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  filter: blur(10px); /* Apply blur to the background */
+  z-index: -1; /* Ensure the background stays behind the content */
+}
+
+/* Main Form Container */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background to see the image behind */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  position: relative; /* Ensure the form content is above the pseudo-element */
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333; /* Brighter color for the header text */
+  margin-bottom: 20px;
+}
+
+/* Input Group Styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333; /* Brighter color for label text */
+  margin-bottom: 8px;
+}
+
+/* General Input, Select, Textarea Styling */
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #333; /* Keep input text darker for readability */
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Textarea Specific Styling */
+.input-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Checkbox Skills Section */
+.skills-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-checkboxes label {
+  margin-right: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.skills-checkboxes input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Resume Upload Field */
+.input-group input[type="file"] {
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+  text-align: center;
+}
+
+.submit-btn button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn button:hover {
+  background-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    font-size: 14px;
+  }
+
+  .submit-btn button {
+    font-size: 16px;
+  }
+}

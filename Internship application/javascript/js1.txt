@@ -1,0 +1,32 @@
+//allowonly name
+function allowAlphaticalOnly(events){
+var key=event.key
+if(!/^[A-Za-z]$/.test(key) && evet.key!==8){
+event.preventDefault();
+}
+}
+
+//allow only number
+function allowNumberOnly(events){
+const key=event.key;
+if(!/[0-9]/.test(key)&& key !=="Backspace"&& key !== "Delete"){
+event.preventDefault();
+}
+}
+
+
+//email validate
+emailInput.addEventListener('input',function(){
+if(!emailInput.validity.valid){
+ emailError.textContent="please enter valid email address";
+}
+else{
+emailError.textContent='';
+}
+}
+);
+
+//other do not see the previous user details
+autocompleteoff
+
+
