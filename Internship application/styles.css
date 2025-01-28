@@ -1,0 +1,154 @@
+/* Reset all margins, paddings, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling: background color and centering content */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #f3f4f6; /* Fallback background color */
+}
+
+/* Form container styling */
+.container {
+    background-image: url('download.jpg'); /* Your image URL */
+    background-size: cover; /* Ensure the background image covers the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    padding: 40px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 100%;
+    max-width: 450px; /* Maximum width */
+    text-align: center;
+    color: #fff; /* White text color for contrast with background */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+    position: relative;
+}
+
+/* Add a dark overlay to brighten text */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to make text brighter */
+    border-radius: 12px;
+    z-index: -1; /* Ensure the overlay is behind the text */
+}
+
+/* Container hover effect */
+.container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Form heading */
+h1 {
+    font-size: 30px; /* Larger font size */
+    color: #fff; /* White color for bright text */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Text shadow for contrast */
+}
+
+/* Form label styles */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #fff; /* White text color */
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Light shadow for better visibility */
+}
+
+/* Input and textarea styling */
+input, textarea {
+    width: 100%; /* Make input fields fill the width of the container */
+    padding: 12px 15px; /* Padding inside inputs */
+    margin-bottom: 20px; /* Spacing between form elements */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and box-shadow */
+}
+
+/* Input field focus state */
+input:focus, textarea:focus {
+    border-color: #4CAF50; /* Green border when focused */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.6); /* Green shadow effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Textarea specific styles */
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px; /* Minimum height for textarea */
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px 20px; /* Padding inside the button */
+    width: 100%; /* Full-width button */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition on hover and active */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Button active effect */
+button:active {
+    transform: translateY(1px); /* Pressed button effect */
+}
+
+/* Media query for small screens (mobile-first design) */
+@media (max-width: 500px) {
+    .container {
+        padding: 25px; /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 26px; /* Smaller font size for the heading */
+    }
+
+    button {
+        font-size: 16px; /* Smaller button font size */
+    }
+
+    input, textarea {
+        font-size: 14px; /* Smaller font size for input fields */
+    }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
