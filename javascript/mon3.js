@@ -49,9 +49,9 @@ while (i <= 100) {
     i++; // Increment by 1
 }*/
 
-//Here's a for loop that sums numbers from 1 to 50, but it breaks if the sum exceeds 100
+//5.Here's a for loop that sums numbers from 1 to 50, but it breaks if the sum exceeds 100
 
-let sum = 0;
+/*let sum = 0;
 
 for (let i = 1; i <= 50; i++) {
     sum += i;
@@ -62,6 +62,40 @@ for (let i = 1; i <= 50; i++) {
     }
 }
 
-console.log("Final Sum:", sum);
+console.log("Final Sum:", sum);*/
+
+//6.Here's a Python loop that skips adding numbers that are divisible by 3:
+
+/*let total = 0;
+
+for (let num = 1; num <= 20; num++) { // Example range from 1 to 20
+    if (num % 3 === 0) {
+        continue; // Skip numbers divisible by 3
+    }
+    total += num;
+}
+
+console.log("Total sum:", total);*/
+
+//7.write a nested that print a multiplication table 1-10 in javascript
 
 
+
+
+/*for (let i = 1; i <= 10; i++) {
+    console.log(`Multiplication Table for ${i}`);
+    for (let j = 1; j <= 10; j++) {
+        console.log(`${i} x ${j} = ${i * j}`);
+    }
+    console.log(""); // Adds a blank line for readability
+}*/
+
+//8.
+
+for (let i = 5; i <= 15; i++) {  // Outer loop controls rows (from 5 to 15)
+    let stars = "";
+    for (let j = 1; j <= i; j++) {  // Inner loop controls stars per row
+        stars += "*";
+    }
+    console.log(stars);  // Print each row of stars
+}
