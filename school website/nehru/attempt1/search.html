@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Responsive Search Bar</title>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  .search-container {
+    position: relative;
+    width: 200px;
+    transition: width 0.4s ease-in-out;
+  }
+  .search-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  .search-container .fa-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+  }
+  .search-container input:focus {
+    width: 300px;
+    border-color: #007BFF;
+  }
+</style>
+</head>
+<body>
+
+<div class="search-container">
+  <input type="text" name="search" placeholder="Search..." autocomplete="off">
+  <i class="fas fa-search"></i>
+</div>
+
+</body>
+</html>

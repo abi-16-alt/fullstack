@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Little Flower Matriculation School</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  .header {
+    background: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav {
+    flex-grow: 1;
+  }
+  .search-container {
+    position: relative;
+    width: 40px;
+    overflow: hidden;
+    transition: width 0.4s ease-in-out;
+    display: inline-block;
+    margin-left: auto;
+  }
+  .search-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  .search-container .fa-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    cursor: pointer;
+  }
+  .search-container:hover {
+    width: 200px;
+  }
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slides img {
+    width: 100%;
+  }
+  .slider-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .slider-buttons button {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <b>NEWS:</b>
+            <marquee>🎉 Welcome to Little Flower Matriculation School – Striving for Excellence in Education! 📚✨</marquee>
+            <div class="auth-links">
+               <b><a href="file:///C:/Users/StarWorld/Desktop/intern/s1/login/loginform.html" class="login-in">Login</a>
+                <a href="signup.html">Sign Up</a></b>
+            </div>
+        </div>
+    </div>
+    <div class="container nav-container">
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <a href="">Home</a>
+            <a href="">About us</a>
+            <a href="">Events</a>
+            <a href="">Gallery</a>
+            <a href="">Notice Board</a>
+            <a href="">Blog</a>
+            <a href="">Contact Us</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" name="search" placeholder="Search..." autocomplete="off">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <img src="img1.jpg">
+            <img src="i1.jpg">
+            <img src="i2.jpg">
+            <img src="i3.jpg">
+            <img src="i4.jpg">
+            <img src="i5.jpg">
+            <img src="i6.jpg">
+        </div>
+        <div class="slider-buttons">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+    <script>
+      let index = 0;
+      function showSlide(i) {
+        const slides = document.querySelector('.slides');
+        const totalSlides = slides.children.length;
+        index = (i + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(${-index * 100}%)`;
+      }
+      function prevSlide() {
+        showSlide(index - 1);
+      }
+      function nextSlide() {
+        showSlide(index + 1);
+      }
+    </script>
+    <div class="main-section">
+        <div class="container">
+            <div class="event">
+                <h2 class="heading">Recent Event</h2>
+                <div>
+                    <marquee direction="up" scrollamount="7" style="height:340px">
+                        <ul>
+                            <li><i>01-april-2025: Nehru Matriculation School is a prestigious institution dedicated to providing quality education and holistic development for students</i></li>
+                            <li><i>01-april-2025: Nehru Matriculation School is a prestigious institution dedicated to providing quality education and holistic development for students</i></li>
+                            <li><i>01-april-2025: Nehru Matriculation School is a prestigious institution dedicated to providing quality education and holistic development for students</i></li>
+                            <li><i>01-april-2025: Nehru Matriculation School is a prestigious institution dedicated to providing quality education and holistic development for students</i></li>
+                            <li><i>01-april-2025: Nehru Matriculation School is a prestigious institution dedicated to providing quality education and holistic development for students</i></li>
+                            <li><i>01-april-2025: Nehru Matriculation School is a prestigious institution dedicated to providing quality education and holistic development for students</i></li>
+                        </ul>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
