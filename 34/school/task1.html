@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Student Details</title>
+        <style>
+            body{
+                width: 80%;
+                height: 80%;
+                text-align: center;
+                margin: auto;
+                padding: 20px;
+                background-color: rgb(183, 224, 252);
+                background-repeat: no-repeat;
+                background-size:100% 100%;
+                
+
+            }
+            form{
+                
+                width: 40%;
+                height:90%;
+                box-sizing: border-box;
+                border: 3px solid rgb(35, 167, 228);
+                border-radius: 30px;
+                margin: 10px;
+                padding: 20px;
+                background-color:rgb(133, 172, 245);
+            }
+            label{
+                float: inline-start;
+                color: black ;
+                font-weight: bold;
+                
+            }
+            
+            
+
+            input{
+                width: 80%;
+                padding: 10px;
+                margin-bottom: 10px;
+                display: inline-block;
+                border-radius: 10px;
+                border-color: lightblue;
+                               
+
+            }
+            #submit{
+                background-color: rgb(68, 248, 52);
+                padding: 10px;
+                margin: 5px 0 20px 0;
+                color: blue;
+                font-size: larger;
+                font-weight: bolder;
+                }
+            
+            #line{
+                display: inline;
+                float:inline;
+                text-align: center;
+            }
+            input[type='']{
+                
+
+            }
+
+        </style>
+    
+    </head>
+    <script>
+        function allowAlphabetonly(event){
+            var key=event.key;
+            if(!/^[A-Za-z]$/.test(key)&&event.keyCode!==8){
+                event.preventDefault();
+
+            }
+        }
+        function allowOnlyNumbers(event){
+            const key=event.key;
+            if(!/[0-9]/.test(key)&&key!=="Backspace"&&key!=="Delete"){
+                event.preventDefault();
+
+            }
+
+
+        }
+        emailInput.addEventListener('input',function(){
+            if(!emailInput.Validity.valid){
+                emailError.textContent="Enter valid email";
+            }
+            else{
+                emailError.textContent='';
+            }
+        })
+    </script>
+    
+    <body background="E:\html\book.jpg">
+        <div id="one">
+        <form>
+            <h1 style="color: rgb(0, 0, 0);">
+                STUDENT DEATAILS
+            </h1>
+            <div>
+                <label id="name">NAME:</label><br>
+                <input  type = "text" id="name" for="name" autocomplete="off" onkeydown="allowAlphabetonly(event)">
+            </div>
+            <div >
+                <label >COURSE:</label><br>
+                
+                <p>B.E</p>
+                <input type="radio"  name="course" >
+                <p>B.Tech</p>
+                <input type="radio" id="btech" name="course" value="B.Tech">
+            
+            </div>
+            <div><label id="Cname">COLLEGE NAME:</label><br>
+                <input  type = "text" id="cname" for="cname"></div>
+            <div><label id="ph">PHONE NO:</label><br>
+                <input  type = "text" id="ph" for="ph" autocomplete="off" onkeypress="allowOnlyNumbers(event)"></div>   
+               
+            <div><label id="address">ADDRESS:</label><br>
+                <input  type = "text" id="address" for="address"></div>    
+            <div>    
+                <label id="date">DATE:</label><br>
+                <input  type = "date" id="date" for="date">
+
+            </div>
+            <div >
+                <input type="submit" id="submit" value="Submit" >
+            </div>
+        
+        </form>
+        </div>
+    </body>
+</html>

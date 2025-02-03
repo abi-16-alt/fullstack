@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therasa</title>
+    <link rel="stylesheet" href="E:\intern\schoolwebsite\style.css">
+</head>
+
+<body >
+
+<div id="activity">
+    <header>
+        <img id="image1" src="E:\intern\schoolwebsite\mother_theresa.png" alt="Therasa">
+        <div class="container">
+            
+            <h1>THERASA NURSERY AND PRIMARY SCHOOL</h1>
+            <h3>THANJAVUR</h3>
+            <div class="menu">
+            <nav>
+                <ul >
+                    <li class="navlist"><a href="E:\intern\schoolwebsite\educampus.html">Home</a></li>
+                    <li class="navlist"><a href="E:\intern\schoolwebsite\about.html">About Us</a></li>
+                    <li class="navlist"><a href="E:\intern\schoolwebsite\admission.html">Admission</a></li>
+                    <li class="navlist"><a href="E:\intern\schoolwebsite\activities.html">Activities</a></li>
+                    <li class="navlist" ><a href="#contact">Contact</a></li>
+                    <button class="menubar" onclick="myFunction()">
+                        <i class="fa-solid fa-bars "></i>
+                    </button>
+                </ul>
+            
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css" integrity="sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="E:\intern\schoolwebsite\Register.html">Register</a>
+                    <a href="E:\intern\schoolwebsite\login.html">Login</a>
+                </div>
+            </nav>
+            <marquee behavior="scroll" direction="left">”Take a look at the opportunities you’ll have at the school. The task of the modern educator is not to cut down jungles, but to irrigate deserts.”</marquee>
+            
+            </div>
+            <script>
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+                window.onclick = function(event) {
+                    if (!event.target.matches('.menubar')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+
+            </script>
+                    
+                
+            
+        </div>
+    <h1>
+        Activities
+    </h1>
+</header>
+    <p>Silambam<br>Karathe<br>Classical Dance<br>Sports</p>
+    <img src="E:\intern\schoolwebsite\silambam.jpg" alt="Silambam" style="float: centre;width: 40%;height: 40%;">
+    <img src="E:\intern\schoolwebsite\karathe.jpg" alt="Karathe" style="float: center;width: 29%;height: 29%;">
+    <img src="E:\intern\schoolwebsite\class.jpg" alt="Classroom" style="float: centre;width: 40%;height: 40%;">
+    <img src="E:\intern\schoolwebsite\kids.jpg" alt="Students" style="float:center;width: 35%;height: 35%;">
+    
+</div>
+<footer id="contact">
+    <h1>
+        Contact 
+    </h1>
+    <address>
+        Therasa School,<br>
+        Keelakkuruchi west,<br>
+        Thanjaur.
+    </address>
+    <b>Email:</b><i style="font-size:medium;">therasa@gmail.com</i>
+    
+
+</footer>
+
+</body></html>
