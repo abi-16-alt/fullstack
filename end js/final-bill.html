@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Bill</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Final Bill</h2>
+        <p><strong>Subtotal:</strong> ₹<span id="subtotal">0</span></p>
+        <p><strong>Discount:</strong> <span id="discount">0</span>%</p>
+        <p><strong>Total Payable:</strong> ₹<span id="total">0</span></p>
+        <button onclick="window.print()">Print Bill</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let billData = JSON.parse(localStorage.getItem("finalBill")) || {};
+            document.getElementById("subtotal").textContent = billData.subtotal || "0.00";
+            document.getElementById("discount").textContent = billData.discount || "0";
+            document.getElementById("total").textContent = billData.total || "0.00";
+        });
+    </script>
+</body>
+</html>
