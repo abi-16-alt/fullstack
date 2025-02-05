@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<htmll>
+    <head>
+        <title>
+            function js
+        </title>
+    </head>
+    <body>
+        <input  id="1" value="34"><br><br>
+        <input  id="2"><br><br>
+        <button onclick="result()">Result</button>
+        <script>
+            var a=document.getElementById(1)
+            var b=document.getElementById(2)
+            function result()
+            {
+                var c=Number(a.value) +Number(b.value)
+                //document.write("Result:"+c)
+                //alert("Result:"+c)
+                //confirm("Result:"+c)
+                prompt("Result:"+c)
+            }
+
+
+            //or
+/* var a_value=Number(a.value)
+   var b_value=Number(b.value)
+   var total=a_value+b_value
+   function result()
+   {
+   document.write("result:"+total)
+   }*/
+        </script>
+    </body>
+</htmll>

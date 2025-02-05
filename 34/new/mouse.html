@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="myid">Move the mouse over this text .move the mouse out the text</h1>
+        <script>
+            var a=document.getElementById("myid")
+            a.onmouseover=function(){mouseover_fun()};
+            document.getElementById("myid").onmouseout=function(){mouseout_fun()};
+            function mouseover_fun(){
+                a.style.color="red";
+
+            }
+            function mouseout_fun(){
+                document.getElementById("myid").style.color="blue";
+
+            }
+        </script>
+    </body>
+</html>

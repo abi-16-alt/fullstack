@@ -1,0 +1,11 @@
+<input id="demo" onkeyup="update()">
+<h1 id="result" style="color:rgb(19, 237, 245)";></h1>
+<script>
+    var inputbox=document.getElementById("demo")
+    var result=document.getElementById("result")
+
+    function update()
+    {
+        result.textContent=inputbox.value
+    }
+</script>
