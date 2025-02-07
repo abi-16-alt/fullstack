@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Arithmetic</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            form {
+                display: inline-block;
+                padding: 20px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+                text-align: left;
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin: 10px 0 5px;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 16px;
+                font-weight: bold;
+                padding: 10px 15px;
+                margin: 5px;
+                border: 2px solid black;
+                border-radius: 5px;
+                background-color: rgb(128, 208, 240);
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            button:hover {
+                background-color: rgb(98, 178, 210);
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="a_value">A Value</label>
+            <input id="a_value" type="number"><br>
+            <label for="b_value">B Value</label>
+            <input id="b_value" type="number"><br>
+            <label for="result">Result</label>
+            <input id="result" type="number" readonly><br>
+
+            <button type="button" onclick="add()">ADD</button>
+            <button type="button" onclick="sub()">SUB</button>
+            <button type="button" onclick="multiply()">MULTIPLY</button>
+            <button type="button" onclick="div()">DIVIDE</button>
+            <button type="reset">RESET</button>
+        </form>
+
+        <script>
+            function add() {
+                var a = document.getElementById("a_value").value;
+                var b = document.getElementById("b_value").value;
+                document.getElementById("result").value = (a * 1) + (b * 1);
+            }
+
+            function sub() {
+                var a = document.getElementById("a_value").value;
+                var b = document.getElementById("b_value").value;
+                document.getElementById("result").value = (a * 1) - (b * 1);
+            }
+
+            function multiply() {
+                var a = document.getElementById("a_value").value;
+                var b = document.getElementById("b_value").value;
+                document.getElementById("result").value = (a * 1) * (b * 1);
+            }
+
+            function div() {
+                var a = document.getElementById("a_value").value;
+                var b = document.getElementById("b_value").value;
+                if (b == 0) {
+                    alert("Division by zero is not allowed.");
+                    document.getElementById("result").value = "Error";
+                } else {
+                    document.getElementById("result").value = (a * 1) / (b * 1);
+                }
+            }
+        </script>
+    </body>
+</html>

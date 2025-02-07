@@ -1,0 +1,18 @@
+PS E:\intern\reactjs> npm create vite@latest
+
+> npx
+> create-vite
+
+√ Project name: ... .
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+
+Scaffolding project in E:\intern\reactjs...
+
+Done. Now run:
+
+  npm install
+  npm run dev
+
+PS E:\intern\reactjs> npm install
+⠦
